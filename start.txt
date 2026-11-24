@@ -1,4 +1,0 @@
-cd ~/Coding/StockBoarding/backend
-source venv/bin/activate
-lutter run -d chrome            
- uvicorn app.main:app --reload

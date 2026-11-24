@@ -8,9 +8,23 @@
 .env
 .env.*
 *.env
+**/.env
+**/.env.*
+**/*.env
 backend/.env
 !.env.example
 !backend/.env.example
+
+# Sensitive credentials & keys
+secrets.json
+credentials.json
+service-account*.json
+*.pem
+*.key
+*.crt
+*.cert
+*.p12
+*.pfx
 
 # ------------------------------------------------------------------------------
 # Python & Virtual Environments
@@ -35,9 +49,8 @@ backend/.venv/
 
 # ------------------------------------------------------------------------------
 # Backend Runtime Uploads & Generated Data
-# (Excludes personal documents, statements, and user uploads)
+# (Excludes personal documents, statements, and user uploads while preserving .gitkeep)
 # ------------------------------------------------------------------------------
-uploads/
 backend/uploads/*
 !backend/uploads/.gitkeep
 
@@ -109,6 +122,7 @@ __MACOSX/
 # ------------------------------------------------------------------------------
 # IDEs and Code Editors
 # ------------------------------------------------------------------------------
+.vscode/
 .idea/
 *.iml
 *.iws
@@ -119,9 +133,14 @@ __MACOSX/
 *.sublime-project
 *.sublime-workspace
 
-# Sensitive certificates and keys
-*.pem
-*.key
-*.crt
-*.cert
-*.p12
+# ------------------------------------------------------------------------------
+# Scratch, Notes & Temporary Files
+# ------------------------------------------------------------------------------
+start.txt
+topic.xtx
+*.xtx
+scratch/
+*.tmp
+*.bak
+*.swp
+*~
